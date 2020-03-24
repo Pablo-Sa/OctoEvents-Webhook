@@ -16,12 +16,11 @@ public class IssuesEventsService {
 	IssuesEventsRepository issuesEventsRepository;
 
 	public IssuesEvents save(IssuesEvents issues) {
-		IssuesEvents issuesEvents = new IssuesEvents();
-		issuesEvents.setAction(issues.getAction());
-		issuesEvents.setIssue(issues.getIssue());
-		issuesEvents.setIssuesId(issues.getIssue().getId());
-		issuesEvents.setRepository(issues.getRepository());
-		issuesEvents.setSender(issues.getSender());
+		IssuesEvents issuesEvents = new IssuesEvents(issues.getAction(),
+										issues.getIssue(),
+										issues.getRepository(),
+										issues.getIssue().getId(),
+										issues.getSender());
 		return this.issuesEventsRepository.save(issuesEvents);
 	}
 
@@ -29,22 +28,18 @@ public class IssuesEventsService {
 		List<IssuesEvents> eventTempList = issuesEventsRepository.findByIssuesId(id);
 		return this.issueToDto(eventTempList);
 	}
-	
-	public List<ResponseDTO> issueToDto (List<IssuesEvents> eventTempList) {
+
+	public List<ResponseDTO> issueToDto(List<IssuesEvents> eventTempList) {
 		List<ResponseDTO> responseTempList = new ArrayList<>();
 		for (IssuesEvents issueTemp : eventTempList) {
-			ResponseDTO response = new ResponseDTO();
-			response.setAction(issueTemp.getAction());
-			response.setCreated_at(issueTemp.getIssue().getCreated_at());
+			ResponseDTO response = new ResponseDTO(issueTemp.getAction(), 
+												   issueTemp.getIssue().getCreated_at());
 			responseTempList.add(response);
 		}
 		return responseTempList;
 	}
 
-	
 	public IssuesEvents findByIdpk(Long id) {
 		return this.issuesEventsRepository.findByIdpk(id);
-
 	}
-	
 }

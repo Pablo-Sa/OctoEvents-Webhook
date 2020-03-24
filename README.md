@@ -40,8 +40,6 @@ seria `jdbc:postgresql://localhost:5432/recrutamento`. Para configurar usuário 
 spring.datasource.username=postgres
 spring.datasource.password=postgres
 
-OBS: No projeto para geração dos Getters e Setters das Entitys foi utilizado o Lombook, logo é necessário instalar o Jar do mesmo na máquina local, dependendo de qual IDE for utilizar.
-
 #### 3 - Buildar e executar a aplicação
 
 Dentro do diretório root da aplicação executar os passos abaixo.

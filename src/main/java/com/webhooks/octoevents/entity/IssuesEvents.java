@@ -12,12 +12,15 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Setter
 @Getter
+@NoArgsConstructor
 public class IssuesEvents implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -37,4 +40,20 @@ public class IssuesEvents implements Serializable {
 	@JoinColumn(name = "sender_ID")
 	private Sender sender;
 
+    @Builder
+    public IssuesEvents(
+            String action,
+            Issue issue,
+            Repository repository,
+            Long issuesId,
+            Sender sender)
+    {
+        this.action = action;
+        this.issue = issue;
+        this.issue = issue;
+        this.repository = repository;
+        this.issuesId = issuesId;
+        this.sender = sender;
+    }
+	
 }
