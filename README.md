@@ -114,8 +114,9 @@ para recuperar os eventos gravados.
 ## Principais tecnologias e frameworks utilizados
 
 - Java 8
-- Spring Boot 2
+- Spring Boot 
 - JUnit 5
 - Mockito
 - Hibernate
 - Swagger
+- Lombook
