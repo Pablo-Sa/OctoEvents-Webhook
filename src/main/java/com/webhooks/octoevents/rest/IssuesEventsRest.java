@@ -37,7 +37,7 @@ public class IssuesEventsRest {
 
 	@ApiOperation(value="Return Action and Date Create")
 	@RequestMapping(method = RequestMethod.GET, path = "/issues/{issueId}/events")
-	public List<ResponseDTO> buscarPorNome(@PathVariable("issueId") Long issueId) {
+	public List<ResponseDTO> IssueId(@PathVariable("issueId") Long issueId) {
 		verifyIfContactExists(issueId, Error.ERRO_GET.getDescricao());
 		List<ResponseDTO> responseDTOList = issuesEventsService.findByIssueId(issueId);
 		return responseDTOList;
