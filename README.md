@@ -5,6 +5,15 @@ Abaixo imagem ilustrativa do ciclo de vida da requicição:
 
 ![alt text](imgs/octo_events.png)
 
+# DOCKER
+Caso Queira Executar tal aplicação em um Container Docker, ambiente Ubuntu, favor executar os passos abaixo.
+- Partindo do pressuposto que já tenha instalado o Docker e o Docker-Compose em seu host S.O Linx como : Ubuntu, CentoOS e derivados.
+ - Somente  à partir do Arquivo Docker-Compose.Yml que se encontra na raiz do projeto gerar uma imagem.
+simplesmente com o comando abaixo -- "docker-compose up".
+## docker-compose up
+* Tudo Será feito de forma automática, todos os pacotes serão baixados, instalados e ambientado, somente lembrando que no arquivo Docker-Compose.Yml foi criado uma rede para realizar a ligação entre o banco de dados e a API, logo caso a rede já exista em seu Docker, dará conflito e não será gerado a imagem. Lembrando que tal comando deve ser executado pelo terminal na raiz do projeto, exatamente onde se encontra o arquivo Docker-Compose.yml. Com o comando acima realizado, a aplicação inteira já está configurada e se tudo deu certo você deverá conseguir acessar a mesma pelo navegador, através do endereço de IP da qual a máquina host que foi instalado o docker na porta 8080, melhores informações para execução do projeto logo abaixo.
+* Nota: Lembre-se que quando for executar em ambientes como CentOS tais S.O possuem firewall, logo será necessário realizar a liberação das portas no mesmo para poder acessar a aplicação. 
+
 ## Executando e testando o projeto
 
 ### Pré-requisitos
