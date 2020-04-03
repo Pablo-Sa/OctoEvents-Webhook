@@ -1,0 +1,36 @@
+version: "3"
+services:
+  db:
+    image: postgres:9.6
+    networks:
+      backend:
+         ipv4_address: 10.9.0.5
+    restart: always
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "recrutamento"
+    ports:
+      - "5432:5432"
+  web:
+    container_name: "back-end"
+    networks:
+      backend:
+         ipv4_address: 10.9.0.4
+    image: app
+    build:
+       context: .
+       dockerfile: DockerFile
+    restart: always
+    ports:
+      - "8080:8080"
+    links:
+      - db
+    depends_on:
+      - db
+networks:
+  backend:
+    ipam:
+      driver: default
+      config:
+           - subnet: 10.9.0.0/24
