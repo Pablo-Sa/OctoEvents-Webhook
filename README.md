@@ -67,11 +67,11 @@ Dentro do diretório root da aplicação executar os passos abaixo.
 O Maven através do `spring-boot-maven-plugin` gera o jar executável.
 Então basta entrar no diretório `target/` e executar:
 
-`$ java -jar "apirest-0.0.1-SNAPSHOT"`
+`$ java -jar "apirest-0.0.1-SNAPSHOT.jar"`
 
 OBS: Lembrando que deve informar todo o Diretório, então supondo que a pasta esteja em C:\
 Logo o Comando Será : 
-`$ java -jar "C:\pastadoprojeto\target\apirest-0.0.1-SNAPSHOT"`
+`$ java -jar "C:\pastadoprojeto\target\apirest-0.0.1-SNAPSHOT.jar"`
 
 A partir deste ponto se tudo ocorrer corretamente a aplicação estará rodando 
 
