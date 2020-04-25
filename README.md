@@ -14,6 +14,12 @@ simplesmente com o comando abaixo -- "docker-compose up".
 * Tudo Será feito de forma automática, todos os pacotes serão baixados, instalados e ambientado, somente lembrando que no arquivo Docker-Compose.Yml foi criado uma rede para realizar a ligação entre o banco de dados e a API, logo caso a rede já exista em seu Docker, dará conflito e não será gerado a imagem. Lembrando que tal comando deve ser executado pelo terminal na raiz do projeto, exatamente onde se encontra o arquivo Docker-Compose.yml. Com o comando acima realizado, a aplicação inteira já está configurada e se tudo deu certo você deverá conseguir acessar a mesma pelo navegador, através do endereço de IP da qual a máquina host que foi instalado o docker na porta 8080, melhores informações para execução do projeto logo abaixo.
 * Nota: Lembre-se que quando for executar em ambientes como CentOS tais S.O possuem firewall, logo será necessário realizar a liberação das portas no mesmo para poder acessar a aplicação. 
 
+# Heroku
+* Fiz o Deploy desta aplicação no Heroku, abaixo segue o Link de acesso a mesma, tal lhe redirecionará para a página de documentação da API, feita utilizando o Framework Swagger, que através dela, poderá verificar todos os EndPoints disponíveis, bem como a utilização dos mesmos, assim caso queria testar o funcionamento da mesma sem precisar ambientar nada basta clicar no link abaixo.
+
+    * https://octoevents-webhook.herokuapp.com/swagger-ui.html  
+
+
 ## Executando e testando o projeto
 
 ### Pré-requisitos
