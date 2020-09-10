@@ -1,7 +1,7 @@
 # Octo_Events
 O OctoEventsAplication recebe evetos da Issue do GitHube via WebHooks e disponibiliza via Api-Rest para uso futuro. 
 
-Abaixo imagem ilustrativa do ciclo de vida da requicição:
+Abaixo imagem ilustrativa do ciclo de vida da requisição:
 
 ![alt text](imgs/octo_events.png)
 
